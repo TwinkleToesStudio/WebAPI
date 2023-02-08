@@ -22,7 +22,7 @@ namespace GameWiki.Core
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
                 command.ExecuteNonQuery();
-                if(command.ExecuteScalar().ToString() == null)
+                if(command.ExecuteScalar() == null)
                 {
                     return "null";
                 }

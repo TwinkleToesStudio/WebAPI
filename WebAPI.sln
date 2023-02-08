@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWiki.Core", "GameWiki.Core\GameWiki.Core.csproj", "{A0B92E32-04B1-4C48-A07C-E0913D76F873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWiki.Core", "GameWiki.Core\GameWiki.Core.csproj", "{A0B92E32-04B1-4C48-A07C-E0913D76F873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunTest", "RunTest\RunTest.csproj", "{31D320BB-1E5E-408B-849A-C6AD72CB3ECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunTest", "RunTest\RunTest.csproj", "{31D320BB-1E5E-408B-849A-C6AD72CB3ECE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A0B92E32-04B1-4C48-A07C-E0913D76F873} = {A0B92E32-04B1-4C48-A07C-E0913D76F873}
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWiki.Host", "SelfHost\GameWiki.Host.csproj", "{8118A80B-D92B-4BBC-9E8B-40352E0D768A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{31D320BB-1E5E-408B-849A-C6AD72CB3ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31D320BB-1E5E-408B-849A-C6AD72CB3ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D320BB-1E5E-408B-849A-C6AD72CB3ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8118A80B-D92B-4BBC-9E8B-40352E0D768A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8118A80B-D92B-4BBC-9E8B-40352E0D768A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8118A80B-D92B-4BBC-9E8B-40352E0D768A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8118A80B-D92B-4BBC-9E8B-40352E0D768A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
