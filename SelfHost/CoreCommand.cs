@@ -12,11 +12,11 @@ namespace GameWiki.Host
     internal class CoreCommand : ICoreCommand
     {
         //implement get, set, update functions comming from app
-
+        string connection = Constants.CONNECTION_STRING;
+        string returnInfo;
         //remove game from wiki
-        public string removeGame(string gameName)
+        public string removeGame(int id)
         {
-            
             throw new NotImplementedException();
         }
 
@@ -24,20 +24,29 @@ namespace GameWiki.Host
         public string returnGameList()
         {
             string query = "USE [GAMEAPP] EXEC [dbo].[GET_GAME_LIST]";
-            string connection = Constants.CONNECTION_STRING;
-            string returnInfo;
+            returnInfo = CreateCommand(query, connection);
+            return returnInfo;
+        }
+
+        //return games for wiki homepage
+        public string returnGame(int id)
+        {
+            string query = "USE [GAMEAPP] EXEC [dbo].[GET_GAME] " + id;
+            returnInfo = CreateCommand(query, connection);
+            returnInfo = returnInfo.Substring(1, returnInfo.Length-2);
+            return returnInfo;
+        }
+
+        //update game to wiki
+        public string updateGame(int id, string newName)
+        {
+            string query = "USE [GAMEAPP] EXEC [dbo].[UPDATE_GAME] " + id + ", '" + newName + "'";
             returnInfo = CreateCommand(query, connection);
             return returnInfo;
         }
 
         //update game to wiki
-        public string updateGame(string gameName)
-        {
-            throw new NotImplementedException();
-        }
-
-        //update game to wiki
-        public string addGame(string gameName)
+        public string addGame(int id, string name, string description)
         {
             throw new NotImplementedException();
         }
